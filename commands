@@ -1,0 +1,8 @@
+sudo docker build . -t stock-app
+sudo docker run stock-app
+
+
+docker-compose:
+docker network create stock-network
+sudo docker-compose build
+sudo docker-compose up
