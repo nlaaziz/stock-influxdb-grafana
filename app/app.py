@@ -12,8 +12,7 @@ token = "Qja94aR19EopLmK5RAr-u5m3v59EKe_T4Ft6rLa7SiDNqRPbQDi74ytaSY4S3-NXovXk8vJ
 org = "test"
 bucket = "stock"
 alpha_api_key = "2IX3H2UPE39MNJF6"
-alpha_url = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={alpha_api_key}"
-#alpha_url = "https://www.alphavantage.co/query?outputsize=full&function=TIME_SERIES_DAILY&symbol={symbol}&apikey={alpha_api_key}"
+alpha_url = "https://www.alphavantage.co/query?outputsize=full&function=TIME_SERIES_DAILY&symbol={symbol}&apikey={alpha_api_key}"
 symbols = ["AAPL", "ABNB", "AMZN", "GOOGL", "MSFT", "NET", "NFLX", "PINS", "REGI", "NIO", "TSLA"]
 
 time.sleep(10)

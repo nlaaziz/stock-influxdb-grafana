@@ -41,6 +41,8 @@ services:
       interval: 30s
       timeout: 10s
       retries: 5
+    links:
+      - influxdb
   stock-app:
     build:
       context: ./app
