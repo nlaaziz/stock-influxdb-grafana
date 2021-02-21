@@ -1,6 +1,10 @@
 sudo docker build . -t stock-app
 sudo docker run stock-app
 
+directory:
+mkdir grafana/volume
+mkdir influxdb
+mkdir influxdb/volume
 
 docker-compose:
 docker network create stock-network
