@@ -49,6 +49,15 @@ services:
       dockerfile: Dockerfile
     image: stock-app:latest
     container_name: stock-app
+    environment:
+      - INFLUX-URL=http://influxdb:8086
+      - INFLUX-TOKEN=Qja94aR19EopLmK5RAr-u5m3v59EKe_T4Ft6rLa7SiDNqRPbQDi74ytaSY4S3-NXovXk8vJxRaewPZCcCelbEA==
+      - INFLUX-ORG=test
+      - INFLUX-BUCKET=stock
+      - ALPHA-URL=https://www.alphavantage.co/query?outputsize=full&function=TIME_SERIES_DAILY&symbol={symbol}&apikey={alpha_api_key}
+      - ALPHA-API-KEY=****************
+      - SYMBOLS=AAPL,ABNB,AMZN,GOOGL,MSFT,NET,NFLX,PINS,REGI,NIO,TSLA
+      - LAST-DATA=True
     restart: on-failure
     depends_on:
       - grafana
