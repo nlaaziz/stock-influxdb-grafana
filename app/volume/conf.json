@@ -1,0 +1,59 @@
+{
+  "shares": [
+    {
+      "symbol": "AAPL",
+      "number": "11.03",
+      "time": "2021-02-08"
+    },
+    {
+      "symbol": "ABNB",
+      "number": "6.16",
+      "time": "2021-02-08"
+    },
+    {
+      "symbol": "AMZN",
+      "number": "0.45",
+      "time": "2021-02-08"
+    },
+    {
+      "symbol": "GOOGL",
+      "number": "0.71",
+      "time": "2021-02-08"
+    },
+    {
+      "symbol": "MSFT",
+      "number": "7.38",
+      "time": "2021-02-08"
+    },
+    {
+      "symbol": "NET",
+      "number": "6.95",
+      "time": "2021-02-08"
+    },
+    {
+      "symbol": "NFLX",
+      "number": "1.97",
+      "time": "2021-02-08"
+    },
+    {
+      "symbol": "NIO",
+      "number": "25.18",
+      "time": "2021-02-08"
+    },
+    {
+      "symbol": "PINS",
+      "number": "11.68",
+      "time": "2021-02-08"
+    },
+    {
+      "symbol": "REGI",
+      "number": "3.53",
+      "time": "2021-02-08"
+    },
+    {
+      "symbol": "TSLA",
+      "number": "1.13",
+      "time": "2021-02-08"
+    }
+  ]
+}

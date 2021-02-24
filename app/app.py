@@ -1,11 +1,16 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 import time
 import requests
 import json
-import os
 
 from datetime import datetime
 from influxdb_client import InfluxDBClient, Point, WritePrecision
 from influxdb_client.client.write_api import SYNCHRONOUS
+from libs import config
+
 
 # You can generate a Token from the "Tokens Tab" in the UI
 influx_url= os.environ['INFLUX-URL']
@@ -16,6 +21,7 @@ alpha_api_key = os.environ['ALPHA-API-KEY']
 alpha_url = os.environ['ALPHA-URL']
 symbols = os.environ['SYMBOLS'].split(",")
 last_data = os.environ['LAST-DATA']
+config_file = os.environ['CONFIG-FILE']
 
 def get_alpha_data(symbol):
     alpha_query_url = alpha_url.format(symbol=symbol, alpha_api_key=alpha_api_key)
@@ -44,6 +50,9 @@ def fill_influxdb(daily_alpha_data):
         write_data_influxdb(stock_day, stock_day_data)
 
 for symbol in symbols:
+    configure = config.Config(config_file, influx_url, token, bucket, org)
+    configure.push_shares_to_influxdb()
+
     response_alpha_data = get_alpha_data(symbol)
     stock_day = datetime.today().strftime("%y-%m-%d")
     daily_alpha_data = response_alpha_data["Time Series (Daily)"]

@@ -55,9 +55,12 @@ services:
       - INFLUX-ORG=test
       - INFLUX-BUCKET=stock
       - ALPHA-URL=https://www.alphavantage.co/query?outputsize=full&function=TIME_SERIES_DAILY&symbol={symbol}&apikey={alpha_api_key}
-      - ALPHA-API-KEY=****************
+      - ALPHA-API-KEY=2IX3H2UPE39MNJF6
       - SYMBOLS=AAPL,ABNB,AMZN,GOOGL,MSFT,NET,NFLX,PINS,REGI,NIO,TSLA
       - LAST-DATA=True
+      - CONFIG-FILE=/usr/src/app/conf/conf.json
+    volumes:
+      - "./app/volume:/usr/src/app/conf"
     restart: on-failure
     depends_on:
       - grafana
